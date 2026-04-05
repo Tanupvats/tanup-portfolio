@@ -376,11 +376,11 @@ const PROJECTS = [
     icon: <Map className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
     tags: ["PyTorch", "SOM", "Clustering", "PCA"],
     images: [
-      { src: "visualizations/demo_layer_1.gif", caption: "Deep SOM Visualization Layer 1" },
-      { src: "visualizations/demo_macro_cluster.gif", caption: "Deep SOM Visualization Macro cluster" },
+      { src: "demo_layer_1.gif", caption: "Deep SOM Visualization Layer 1" },
+      { src: "demo_macro_cluster.gif", caption: "Deep SOM Visualization Macro cluster" },
       { src: "DeepSOM_segmentation.png", caption: "Deep SOM Architecture" },
       { src: "SOM_architecture.png", caption: "Layer Grid Topologies" },
-      { src: "visualizations/2d_pca_10_Macro_Clusters.png", caption: "2D PCA Representation of Macro Clusters" }
+      { src: "2d_pca_10_Macro_Clusters.png", caption: "2D PCA Representation of Macro Clusters" }
     ],
     summary: "Hierarchical Self Organizing Map pipeline designed for processing and grouping millions of customers based on behavioral signals.",
     details: {

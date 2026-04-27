@@ -3,7 +3,7 @@ import {
   Terminal, Server, Network, Shield, Cpu, Database, 
   Code, Blocks, BrainCircuit, ExternalLink, X, ChevronRight, 
   Map, Fingerprint, Activity, LineChart, MessageSquare, 
-  Mail, Video, FileCheck, Layers, GitBranch, Zap, Crosshair, Box, Target
+  Mail, Video, FileCheck, Layers, GitBranch, Zap, Crosshair, Box, Target, Github
 } from 'lucide-react';
 
 // --- DATA DEFINITIONS ---
@@ -116,15 +116,19 @@ const SKILLS = {
     "Red Hat OpenShift"
 ]};
 
-// All 15 Projects with updated premium icons
+// Added placeholder github links to all projects. 
+// Replace "#" with your actual repository URLs.
 const PROJECTS = [
   {
     id: "autoshield",
     title: "AutoShield AI",
     subtitle: "Multi-Layer Insurance Fraud Detection",
     icon: <Shield className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
-    tags: ["SuperGlue", "Siamese Networks", "YOLOv11", "PyTorch"],
+    github: "https://github.com/Tanupvats/Multi-Layer-Insurance-Fraud-Detection",
+    tags: ["SuperGlue", "Siamese Networks", "YOLOv11", "PyTorch","SAM"],
     images: [
+      { src: "Autoshield_AI_Demo.gif", caption: "Left Side vs Right side Demo" },
+      { src: "Autoshield_AI_demo_windshield_match.gif", caption: "front Windshield vs LRC Windshield Demo" },
       { src: "Multi_layer_fraud_detection.png", caption: "Multi-Layer System Architecture" },
       { src: "pose_training_and_inference.png", caption: "Pose Detection Model Inference" },
       { src: "yolov11_training-inference.png", caption: "YOLOv11 Part Segmentation" },
@@ -146,6 +150,7 @@ const PROJECTS = [
     title: "Agentic HR Platform",
     subtitle: "Multi-Agent Onboarding & Offboarding",
     icon: <Network className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/Intelligent-Onboarding-offboarding-multi-agent-system",
     tags: ["LangGraph", "FastAPI", "Llama 3.2", "MCP", "Streamlit"],
     images: [
       { src: "HLSD_Agentic_onboarding_ofboarding_platform.png", caption: "End-to-End HLSD Flow" },
@@ -171,9 +176,10 @@ const PROJECTS = [
     title: "Self-Service AI Query Webapp",
     subtitle: "Privacy-First SQL Intelligence",
     icon: <Database className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/self-service-ai-query-webapp",
     tags: ["LangGraph", "Ollama", "ChromaDB", "React"],
     images: [
-      { src: "demo_self_service_query_webapp.gif", caption: "Web App Demo" },
+      { src: "demo_self_service_query_web_app.gif", caption: "Web App Demo" },
       { src: "system_architectue_self_service_query_webapp.png", caption: "Agentic Architecture" },
       { src: "agent_state_flow_self_service_query_web_app.png", caption: "Agentic State Graph Flow" }
     ],
@@ -193,6 +199,7 @@ const PROJECTS = [
     title: "Banking Support Agent",
     subtitle: "Conversational Banking Support",
     icon: <MessageSquare className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/customer-support-agent",
     tags: ["LangGraph", "FastAPI", "Azure/OpenAI", "LangSmith", "LangChain"],
     images: [
       { src: "CSA_demo.gif", caption: "End-to-End Support Agent Demo" },
@@ -215,6 +222,7 @@ const PROJECTS = [
     title: "peftml Toolkit",
     subtitle: "PyTorch Compression & Fine-Tuning",
     icon: <Blocks className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/peftml_v2",
     tags: ["Lora","QLoRA", "Sparse-QAT","Pruning" ,"Quantization","Knowledge Distillation", "PyTorch"],
     images: [
       { src: "peftml_system_architecture.png", caption: "Decoupled Engine Architecture" },
@@ -238,6 +246,7 @@ const PROJECTS = [
     title: "GenAI Ad Platform",
     subtitle: "Hyper-Personalized Video Generation",
     icon: <Video className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/Generative-AI-Hyper-Personalized-Ad-Platform",
     tags: ["RVC", "Wav2Lip", "FastAPI", "Docker","React"],
     images: [
       { src: "demo_add_platform.gif", caption: "End-to-End Video Ad Generation Demo" },
@@ -261,6 +270,7 @@ const PROJECTS = [
     title: "NBA Loan Recommendation",
     subtitle: "Next-Best-Action Sequence Modeling",
     icon: <LineChart className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/Next-Best-Action-NBA-Loan-Recommendation-Engine",
     tags: ["Transformers", "PyTorch", "AMP", "NetworkX"],
     images: [
       { src: "demo_insight.gif", caption: "Business Intelligence Dashboard Demo" },
@@ -283,6 +293,7 @@ const PROJECTS = [
     title: "3D Body Measurement",
     subtitle: "Single Image Parameter Extraction",
     icon: <Activity className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/3D-Body-Measurement-from-a-Single-Image",
     tags: ["YOLOv8-seg", "OpenPose", "SMPL", "Streamlit"],
     images: [
       { src: "body_measurement_demo.gif", caption: "3D Body Mesh Estimation Demo" },
@@ -304,6 +315,7 @@ const PROJECTS = [
     title: "AI-Powered Annotator",
     subtitle: "CV Annotation Web App",
     icon: <Code className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/AI-Powered-Annotation-Webapp",
     tags: ["React 18", "Streamlit", "OpenCV", "Fabric.js"],
     images: [
       { src: "seamless_clone_demo.gif", caption: "Poisson Blending Clone Demo" },
@@ -327,6 +339,7 @@ const PROJECTS = [
     title: "Autonomous Carrom Robot",
     subtitle: "AI-Powered Actuation",
     icon: <Target className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/AI-Powered-Autonomous-Carrom-Robot",
     tags: ["YOLOv8", "OpenCV", "Arduino", "Kinematics","c++"],
     images: [
       { src: "system_architecture_autonomous_carrom_playing_robot.png", caption: "5-Layer System Architecture" },
@@ -353,20 +366,23 @@ const PROJECTS = [
     title: "Car Exterior Segmentation",
     subtitle: "Custom UNet++ Pipeline",
     icon: <Layers className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
-    tags: ["UNet++", "PyTorch", "Computer Vision", "Albumentations"],
+    github: "https://github.com/Tanupvats/Custom-Image-Segmentation-with-Unet-PlusPlus",
+    tags: ["UNet++","SAM", "SegFormer", "PyTorch", "Computer Vision", "Albumentations"],
     images: [
-      { src: "demo.jpg", caption: "High-Resolution Segmented Output" },
+      { src: "car_part_segmenter_demo_sam.gif", caption: "High-Resolution Segmented Output" },
+      { src: "segmentation_demo_1.gif", caption: "High-Resolution Segmented Output" },
+      { src: "segmentation_demo.gif", caption: "High-Resolution Segmented Output" },
+      { src: "seg_demo_image.jpg", caption: "High-Resolution Segmented Output" },
       { src: "training_and_inference_unet_Plus_plus.png", caption: "Unet++ Training & Inference" }
     ],
-    summary: "Deep learning segmentation pipeline using UNet++ to identify and segment up to 50 car exterior body parts.",
+   summary: "A production-grade, multi-model semantic segmentation pipeline for fine-grained car exterior part segmentation (50 classes), supporting UNet++, SegFormer, and SAM.",
     details: {
-      problem: "Accurately distinguishing heavily overlapping vehicle sub-components under varied lighting conditions.",
+      problem: "Segmenting fine-grained car exterior parts requires handling 50 highly imbalanced classes, necessitating a flexible pipeline that can leverage strong CNN baselines alongside state-of-the-art vision transformers.",
       architecture: [
-        { step: "Model Architecture", desc: "UNet++ implemented in pure PyTorch for dense pixel-wise prediction." },
-        { step: "Data Preparation", desc: "Heavy augmentation pipeline utilizing Albumentations." },
-        { step: "Evaluation Metrics", desc: "Utilizes robust Intersection over Union (IoU) scoring." },
-        { step: "Modular Design", desc: "Highly separated scripts for data loading, model definition, training, and evaluation for maintainability." }
-      ]
+        { step: "Model Architecture", desc: "Supports three model families: UNet++ (CNN baseline), SegFormer (Mix Transformer/ViT-based), and SAM (Segment Anything) for prompted/automatic segmentation." },
+        { step: "Unified Training Engine", desc: "Utilizes a single training loop reused for all model families, unifying the forward signature for semantic models." },
+        { step: "Compound Loss Optimization", desc: "Applies a compound loss (Dice + Cross-Entropy) with optional Focal/class-weighting to specifically handle the 50 imbalanced classes." },
+        { step: "Efficient Fine-Tuning", desc: "SAM fine-tuning freezes the expensive ViT image encoder and trains only the mask and prompt decoders, making it approximately 150× cheaper than full fine-tuning." }      ]
     }
   },
   {
@@ -374,6 +390,7 @@ const PROJECTS = [
     title: "Deep SOM Segmentation",
     subtitle: "Large Scale Behavioral Clustering",
     icon: <Map className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/Deep-SOM-Customer-Segmentation",
     tags: ["PyTorch", "SOM", "Clustering", "PCA"],
     images: [
       { src: "demo_layer_1.gif", caption: "Deep SOM Visualization Layer 1" },
@@ -398,6 +415,7 @@ const PROJECTS = [
     title: "Smart Mask & Temp Detection",
     subtitle: "Safety Monitoring Edge System",
     icon: <Crosshair className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/mask-temp-monitor",
     tags: ["MobileNetV2", "OpenCV", "Arduino", "IoT"],
     images: [
       { src: "demo_mask_temp_detection.gif", caption: "Real-time Webcam Inference Feed" },
@@ -419,6 +437,7 @@ const PROJECTS = [
     title: "Dual-Comparison Face Recognition",
     subtitle: "Real-Time KYC & Anti-Spoofing",
     icon: <Fingerprint className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
+    github: "https://github.com/Tanupvats/kyc-fraud-face-recognition-system",
     tags: ["FAISS", "InsightFace", "RetinaNet", "Transfer Learning"],
     images: [
       { src: "Face_recognition_fraud.png", caption: "Inference Pipeline & Vector Search" },
@@ -442,22 +461,23 @@ const PROJECTS = [
     title: "Sensor-based Person Tracking",
     subtitle: "Extended Kalman Filter Implementation",
     icon: <Map className="w-8 h-8 text-[#2563EB] icon-glow" strokeWidth={1.5} />,
-    tags: ["EKF", "Python", "Signal Processing", "Data Viz"],
+    github: "https://github.com/Tanupvats/Tracking-Person-Movement-Using-Mobile-Sensor-Data",
+    tags: ["EKF", "Python", "Signal Processing", "Data Viz", "Object Tracking"],
     images: [
-      { src: "tracking_1.gif", caption: "Circular Tracking Animation" },
-      { src: "output_1.png", caption: "Circular Tracking Path Output" },
-      { src: "tracking_2.gif", caption: "Figure-Eight Animation" },
-      { src: "output_2.png", caption: "Figure-Eight Tracking Path Output" }
+      { src: "urban_canyon_track.gif", caption: "Urban Area Tracking Output" },
+      { src: "circle_track.gif", caption: "Circular Path Tracking Output" },
+      { src: "figure_eight_track.gif", caption: "Figure-Eight Tracking Output" },
+      { src: "highway_track.gif", caption: "highway Tracking Output" },
+      { src: "pedestrian_track.gif", caption: "pedestrian Walk Tracking Output" }
     ],
-    summary: "An Extended Kalman Filter (EKF) implementation for estimating state and tracking complex human motion paths using mobile sensor data.",
+    summary: "A production-grade Python project for tracking person and vehicle movement by fusing IMU, GPS, and magnetometer data, achieving a 54% mean improvement over raw GPS.",
     details: {
-      problem: "Raw mobile sensor data is highly noisy, making it difficult to reconstruct smooth, accurate movement trajectories like circular or figure-eight paths.",
+      problem: "Raw GPS data is prone to outages and multipath errors (especially in urban canyons), requiring the fusion of high-rate inertial sensors to reconstruct smooth, accurate trajectories and handle outliers.",
       architecture: [
-        { step: "Data Generation", desc: "Synthetic signal generation of noisy motion paths (circles, figure-eights) for baseline testing." },
-        { step: "Preprocessing", desc: "Filtering and cleaning logic applied to raw incoming sensor arrays." },
-        { step: "State Estimation", desc: "Extended Kalman Filter (EKF) updates state predictions by fusing historical estimates with incoming noisy measurements." },
-        { step: "Visualization", desc: "Generates animated GIFs and 2D plot maps overlaying ground-truth vs. estimated trajectories." }
-      ]
+        { step: "Sensor Integration", desc: "Fuses high-rate (100 Hz) IMU data with slower GPS (1 Hz) and magnetometer (10 Hz) measurements using a loosely-coupled design." },
+        { step: "State Estimation", desc: "Utilizes an error-state EKF with IMU-driven strap-down propagation, featuring online accelerometer and gyroscope bias estimation." },
+        { step: "Outlier Handling", desc: "Implements Normalised Innovation Squared (NIS) gating for multipath rejection, adaptive process noise, and guarded Zero-Velocity Updates (ZUPT)." },
+        { step: "Visualization", desc: "Generates dashboard animations showing bird's-eye trajectories with 2-σ uncertainty ellipses and dynamic mode indicators." }    ]
     }
   }
 ];
@@ -618,122 +638,212 @@ const Experience = () => (
   </section>
 );
 
+// --- MODAL COMPONENTS ---
+
+// Declarative, safe Image component with Hover and Error States
+const ProjectImage = ({ img, onZoomRequest }) => {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div 
+      className="relative w-full h-[320px] bg-[#F8FAFC] rounded-xl overflow-hidden border border-[#CBD5E1] group shadow-sm hover:shadow-lg hover:border-[#2563EB]/40 transition-all duration-300 cursor-zoom-in"
+      onClick={() => !hasError && onZoomRequest(img.src)}
+    >
+      {!hasError ? (
+        <img 
+          src={img.src} 
+          alt={img.caption} 
+          loading="lazy"
+          className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 ease-out"
+          onError={() => setHasError(true)}
+        />
+      ) : (
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500 bg-[#F8FAFC] p-4">
+          <Code className="w-10 h-10 mb-2 opacity-50" strokeWidth={1} />
+          <span className="text-xs text-center border border-dashed border-[#CBD5E1] p-2 rounded w-full font-mono">
+            Image Unavailable:<br/>{img.src}
+          </span>
+        </div>
+      )}
+
+      {/* Sliding hover caption */}
+      <div className="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-md text-[#0F172A] border-t border-[#CBD5E1] p-4 text-sm font-medium transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <span className="flex items-center gap-2">
+          <Activity className="w-4 h-4 text-[#2563EB]" />
+          {img.caption}
+        </span>
+      </div>
+      
+      {/* Top badge (fades out on hover) */}
+      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-semibold text-[#0F172A] border border-[#CBD5E1] shadow-sm opacity-100 group-hover:opacity-0 transition-opacity duration-300 z-10 pointer-events-none">
+        {img.caption}
+      </div>
+    </div>
+  );
+};
+
 const ProjectModal = ({ project, onClose }) => {
+  const [zoomedImage, setZoomedImage] = useState(null);
+
+  // Lock body scroll securely
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = 'unset'; }
   }, []);
 
+  // Safe robust escape handler to handle both Lightbox and Modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setZoomedImage((currentZoomedImage) => {
+          if (currentZoomedImage) {
+            // If lightbox is open, close lightbox only
+            return null;
+          } else {
+            // If lightbox is closed, close the entire modal
+            onClose();
+            return null; // keep it null
+          }
+        });
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onClose]);
+
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-      <div className="absolute inset-0 bg-[#0F172A]/40 backdrop-blur-md" onClick={onClose}></div>
-      <div className="relative w-full max-w-5xl max-h-[90vh] bg-[#FFFFFF] border border-[#CBD5E1] rounded-xl shadow-2xl overflow-y-auto flex flex-col font-body">
-        
-        {/* Modal Header */}
-        <div className="sticky top-0 bg-[#FFFFFF]/95 backdrop-blur-xl p-6 border-b border-[#CBD5E1] flex justify-between items-start z-10">
-          <div className="flex items-center gap-5">
-            <div className="p-3.5 bg-[#F8FAFC] rounded-xl border border-[#CBD5E1] shadow-sm">
-              {project.icon}
+    <>
+      {/* Main Project Modal */}
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+        <div className="absolute inset-0 bg-[#0F172A]/40 backdrop-blur-md" onClick={onClose}></div>
+        <div className="relative w-full max-w-5xl max-h-[90vh] bg-[#FFFFFF] border border-[#CBD5E1] rounded-xl shadow-2xl overflow-y-auto flex flex-col font-body">
+          
+          {/* Modal Header */}
+          <div className="sticky top-0 bg-[#FFFFFF]/95 backdrop-blur-xl p-6 border-b border-[#CBD5E1] flex flex-col sm:flex-row gap-4 justify-between sm:items-start z-10">
+            <div className="flex items-center gap-5">
+              <div className="hidden sm:block p-3.5 bg-[#F8FAFC] rounded-xl border border-[#CBD5E1] shadow-sm">
+                {project.icon}
+              </div>
+              <div>
+                <h2 className="text-3xl font-display font-bold text-[#0F172A] leading-tight tracking-tight mb-1">{project.title}</h2>
+                <p className="text-[#2563EB] font-medium tracking-wide">{project.subtitle}</p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-display font-bold text-[#0F172A] leading-tight tracking-tight mb-1">{project.title}</h2>
-              <p className="text-[#2563EB] font-medium tracking-wide">{project.subtitle}</p>
+            
+            {/* Actions: Repo & Close */}
+            <div className="flex items-center gap-3">
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 px-4 py-2 bg-[#0F172A] hover:bg-[#1E293B] text-white text-sm font-medium rounded-lg transition-colors shadow-sm"
+                >
+                  <Github className="w-4 h-4" />
+                  View Source
+                </a>
+              )}
+              <button 
+                onClick={onClose} 
+                aria-label="Close modal"
+                className="p-2.5 text-slate-400 hover:text-[#0F172A] hover:bg-[#F8FAFC] rounded-full transition-colors"
+              >
+                <X className="w-6 h-6" strokeWidth={1.5} />
+              </button>
             </div>
           </div>
-          <button onClick={onClose} className="p-2.5 text-slate-400 hover:text-[#0F172A] hover:bg-[#F8FAFC] rounded-full transition-colors">
-            <X className="w-6 h-6" strokeWidth={1.5} />
-          </button>
-        </div>
 
-        {/* Modal Body */}
-        <div className="p-8 space-y-10">
-          
-          {/* Visuals First: Architecture, Demo GIFs, Images */}
-          {project.images && project.images.length > 0 && (
+          {/* Modal Body */}
+          <div className="p-8 space-y-10">
+            
+            {/* Visuals First: Architecture, Demo GIFs, Images */}
+            {project.images && project.images.length > 0 && (
+              <div>
+                <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-5">System Visuals & Demos</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.images.map((img, idx) => (
+                    <ProjectImage 
+                      key={idx} 
+                      img={img} 
+                      onZoomRequest={(src) => setZoomedImage(src)} 
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Small Details / Overview (Right after visuals) */}
             <div>
-              <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-5">System Visuals & Demos</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {project.images.map((img, idx) => (
-                  <div key={idx} className="relative w-full bg-[#F8FAFC] rounded-xl overflow-hidden border border-[#CBD5E1] group shadow-sm hover:shadow-lg hover:border-[#2563EB]/40 transition-all duration-300">
-                    <div className="overflow-hidden h-[320px] flex items-center justify-center bg-[#F8FAFC]">
-                      <img 
-                        src={img.src} 
-                        alt={img.caption} 
-                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-in-out"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div className="hidden absolute inset-0 flex-col items-center justify-center text-slate-500 bg-[#F8FAFC] p-4">
-                        <Code className="w-10 h-10 mb-2 opacity-50" strokeWidth={1} />
-                        <span className="text-xs text-center border border-dashed border-[#CBD5E1] p-2 rounded w-full font-mono">Image File:<br/>{img.src}</span>
-                      </div>
+              <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-4">Project Overview & Challenge</h3>
+              <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#CBD5E1] shadow-sm transition-all hover:shadow-md">
+                <p className="text-[#0F172A] font-medium text-lg mb-4 leading-relaxed">
+                  {project.summary}
+                </p>
+                <p className="text-slate-600 leading-relaxed font-light text-base border-t border-[#CBD5E1] pt-4">
+                  <strong className="font-semibold text-[#1E40AF]">The Challenge:</strong> {project.details.problem}
+                </p>
+              </div>
+            </div>
+
+            {/* Architecture & Pipeline */}
+            <div>
+              <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-5">System Architecture & Pipeline</h3>
+              <div className="grid gap-4">
+                {project.details.architecture.map((layer, idx) => (
+                  <div key={idx} className="flex gap-5 p-5 rounded-lg border border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#2563EB]/40 transition-colors group shadow-sm">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#FFFFFF] text-[#2563EB] flex items-center justify-center font-display font-bold text-sm border border-[#CBD5E1] group-hover:border-[#2563EB]/50 group-hover:bg-[#2563EB]/10 transition-colors shadow-sm">
+                      {idx + 1}
                     </div>
-                    {/* Sliding hover caption */}
-                    <div className="absolute bottom-0 left-0 w-full bg-white/95 backdrop-blur-md text-[#0F172A] border-t border-[#CBD5E1] p-4 text-sm font-medium transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-                      <span className="flex items-center gap-2">
-                        <Activity className="w-4 h-4 text-[#2563EB]" />
-                        {img.caption}
-                      </span>
-                    </div>
-                    {/* Top badge (fades out on hover) */}
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-semibold text-[#0F172A] border border-[#CBD5E1] shadow-sm opacity-100 group-hover:opacity-0 transition-opacity duration-300 z-10">
-                      {img.caption}
+                    <div>
+                      <h4 className="text-[#0F172A] font-display font-semibold mb-1.5 text-lg tracking-wide">{layer.step}</h4>
+                      <p className="text-slate-600 text-base leading-relaxed font-light">{layer.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-          )}
 
-          {/* Small Details / Overview (Right after visuals) */}
-          <div>
-            <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-4">Project Overview & Challenge</h3>
-            <div className="bg-[#F8FAFC] p-6 rounded-xl border border-[#CBD5E1] shadow-sm transition-all hover:shadow-md">
-              <p className="text-[#0F172A] font-medium text-lg mb-4 leading-relaxed">
-                {project.summary}
-              </p>
-              <p className="text-slate-600 leading-relaxed font-light text-base border-t border-[#CBD5E1] pt-4">
-                <strong className="font-semibold text-[#1E40AF]">The Challenge:</strong> {project.details.problem}
-              </p>
-            </div>
-          </div>
-
-          {/* Architecture & Pipeline */}
-          <div>
-            <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-5">System Architecture & Pipeline</h3>
-            <div className="grid gap-4">
-              {project.details.architecture.map((layer, idx) => (
-                <div key={idx} className="flex gap-5 p-5 rounded-lg border border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#2563EB]/40 transition-colors group shadow-sm">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#FFFFFF] text-[#2563EB] flex items-center justify-center font-display font-bold text-sm border border-[#CBD5E1] group-hover:border-[#2563EB]/50 group-hover:bg-[#2563EB]/10 transition-colors shadow-sm">
-                    {idx + 1}
-                  </div>
-                  <div>
-                    <h4 className="text-[#0F172A] font-display font-semibold mb-1.5 text-lg tracking-wide">{layer.step}</h4>
-                    <p className="text-slate-600 text-base leading-relaxed font-light">{layer.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Technology Stack */}
-          <div>
-            <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-4">Technology Stack</h3>
-            <div className="flex flex-wrap gap-2.5">
-              {project.tags.map((tag, idx) => (
-                <span key={idx} className="px-3.5 py-1.5 bg-[#2563EB]/10 text-[#2563EB] font-medium text-sm rounded-md border border-[#2563EB]/20 shadow-sm hover:bg-[#2563EB] hover:text-white transition-colors cursor-default">
-                  {tag}
-                </span>
-              ))}
+            {/* Technology Stack */}
+            <div>
+              <h3 className="text-slate-500 font-display uppercase text-xs font-bold tracking-[0.2em] mb-4">Technology Stack</h3>
+              <div className="flex flex-wrap gap-2.5">
+                {project.tags.map((tag, idx) => (
+                  <span key={idx} className="px-3.5 py-1.5 bg-[#2563EB]/10 text-[#2563EB] font-medium text-sm rounded-md border border-[#2563EB]/20 shadow-sm hover:bg-[#2563EB] hover:text-white transition-colors cursor-default">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Lightbox / Zoomed Image Overlay - Mounted above modal (z-[60]) */}
+      {zoomedImage && (
+        <div 
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-[#0F172A]/90 backdrop-blur-sm transition-opacity" 
+          onClick={() => setZoomedImage(null)}
+        >
+          <div className="relative max-w-[85vw] max-h-[85vh] flex items-center justify-center">
+            <button 
+              className="absolute -top-12 right-0 md:-right-12 text-white/70 hover:text-white transition-colors p-2"
+              onClick={() => setZoomedImage(null)}
+              aria-label="Close zoomed image"
+            >
+              <X className="w-8 h-8" strokeWidth={1.5} />
+            </button>
+            <img 
+              src={zoomedImage} 
+              alt="Zoomed detailed view" 
+              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl cursor-zoom-out"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
@@ -847,13 +957,13 @@ const Footer = () => (
 export default function App() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
+      <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap');
         .font-body { font-family: 'Inter', sans-serif; }
         .font-display { font-family: 'Outfit', sans-serif; }
         .text-glow { text-shadow: 0 0 20px rgba(37,99,235,0.3); }
         .icon-glow { filter: drop-shadow(0 0 8px rgba(37,99,235,0.4)); }
-      `}} />
+      `}</style>
       <div className="min-h-screen bg-[#F8FAFC] text-slate-600 font-body selection:bg-[#2563EB]/20 selection:text-[#0F172A] scroll-smooth">
         <Navbar />
         <main>
